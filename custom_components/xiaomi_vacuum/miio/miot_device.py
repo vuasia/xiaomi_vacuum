@@ -61,7 +61,7 @@ class MiotDevice(Device):
             property_mapping[field_name] = {"siid": siid, "piid": piid}
 
         response = {
-            prop["did"]: prop["value"] if prop["code"] == 0 else None
+            prop["did"]: prop["value"] if prop["code"] is 0 else None
             for prop in self.get_properties_for_mapping(
                 property_mapping, max_properties=cls._max_properties
             )

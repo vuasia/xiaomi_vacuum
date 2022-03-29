@@ -56,6 +56,7 @@ class VacuumStatus(Enum):
     Error = 4
     Go_charging = 5
     Charging = 6
+    Mopping = 7
 
 
 class VacuumSpeed(Enum):
